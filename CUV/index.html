@@ -1,0 +1,512 @@
+<!--
+2025 年 4 月 28 日 
+由英國旅行回來的第二天，就想重做CUV.html,
+感恩，在jetlag的情況下，都能夠一天內完成。
+用Grok 問怎樣set div, 第一次在網頁裡問AI，都答得準確。
+
+很想明白所有聖經，求主帶領，開我眼睛，能看得明白，能有智慧選擇生命。
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&display=swap" rel="stylesheet">
+</head>
+<style>
+.body2{
+font-family: "Noto Sans CJK TC Light", "Hiragino Sans GB", SimSun, Tahoma;}
+
+body {
+background-repeat: no-repeat;
+background-color: #FFFFFF;
+font-family: "Noto Sans CJK TC Light", "Hiragino Sans GB", SimSun, Tahoma;
+
+margin:0;padding:0;
+}
+div.nav{margin:10px;color:#999999;}
+#div_toc2 {flex:1;width:200px;float:left}
+div.toc{line-height:1.5em;font-size:1.2em;font-weight:100;color:#AAAAAA;cursor:pointer;
+font-family: 'Noto Sans Mono', monospace;
+  font-weight: 200; /* ExtraLight */
+  }
+#div_toc2 b{color:black;font-weight:200}
+span.ChiTxt {
+}
+span.EngTxt{    font-family: 'Roboto'}
+.ref_ver_tog {
+cursor:pointer; border:1px solid #CCDDDD;
+width: 2rem;
+display: inline-block;
+text-align: center;
+margin-left: 20px;
+margin-right: 20px;
+border-radius:20px;
+}
+.bk_chp {width:2rem; display:inline-block;cursor:pointer;text-align:right;line-height:1.7em}
+.ref_ccbible { display:inline-block;text-align: center;
+font-size: 1em;
+color: #2288CC;
+margin-left:40px;cursor:pointer;
+}
+
+.ref_ccbible a {cursor:pointer;
+text-decoration: none;
+color: #2288CC;
+}
+.ref_ccbible a:hover {
+color: #DD0000
+}
+sup{color:#666666;font-size:0.7rem}
+    .container {
+            display: flex;
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+        .left-div { min-height:900px;
+        z-index:99;
+width: calc(100vw - 420px);
+  max-width: 100%;         
+     padding: 20px;
+            background-color: #FFFFFF;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;        }
+     
+         .right-div {
+		background-image: url("bg.png");
+		background-repeat: repeat;
+		right:0;
+  	top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
+            width: 350px;
+            height:900px;
+            padding: 0px;margin-right:0px;
+            padding-top:5px;
+          
+        }
+        
+        
+.row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .con-tt , .con-vv {
+            padding: 20px;
+        }
+        
+#book_tab1, #book_tab2, #book_tab3, #book_tab4 {
+position: absolute;
+
+}
+
+#book_tab1 div, #book_tab2 div, #book_tab3 div, #book_tab4 div {
+position: absolute;
+padding: 7px 5px 7px 5px ;
+text-align: center;
+cursor: pointer;
+background: linear-gradient(90deg,rgba(206, 232, 245, 1) 73%, rgba(220, 230, 230, 1) 100%);
+box-shadow:3px 0px 9px -3px #333333;
+white-space: nowrap;
+min-width: 23px;
+height: 23px;
+font-family: "Noto Sans CJK TC Light", "Hiragino Sans GB", SimSun, Tahoma;
+font-size: 1.1rem;
+color: #333333;
+}
+
+
+#book_tab1 div::before , #book_tab2 div::before , #book_tab3 div::before , #book_tab4 div::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top:-1px; /* Extend above the div */
+  height: 60px; /* Total height: 100px (div) + 20px above + 20px below */
+  width: 1px;
+  background: #999999; /* Border color */
+}
+
+#book_tab1 div:nth-child(1) {top:0px; left:0px}
+#book_tab1 div:nth-child(2) {top:38px; left:7px}
+#book_tab1 div:nth-child(3) {top:76px; left:14px}
+#book_tab1 div:nth-child(4) {top:114px; left:21px}
+#book_tab1 div:nth-child(5) {top:152px; left:28px}
+#book_tab1 div:nth-child(6) {top:190px; left:35px}
+#book_tab1 div:nth-child(7) {top:228px; left:42px}
+#book_tab1 div:nth-child(8) {top:266px; left:49px}
+#book_tab1 div:nth-child(9) {top:304px; left:50px}
+#book_tab1 div:nth-child(10) {top:342px; left:57px}
+#book_tab1 div:nth-child(11) {top:380px; left:64px}
+#book_tab1 div:nth-child(12) {top:418px; left:71px}
+#book_tab1 div:nth-child(13) {top:456px; left:78px}
+#book_tab1 div:nth-child(14) {top:494px; left:85px}
+#book_tab1 div:nth-child(15) {top:532px; left:92px}
+#book_tab1 div:nth-child(16) {top:570px; left:94px}
+#book_tab1 div:nth-child(17) {top:608px; left:96px}
+#book_tab1 div:nth-child(18) {top:646px; left:98px}
+#book_tab1 div:nth-child(19) {top:684px; left:105px}
+
+#book_tab2 div:nth-child(1) {top:0px; left:90px}
+#book_tab2 div:nth-child(2) {top:38px; left:97px}
+#book_tab2 div:nth-child(3) {top:76px; left:104px}
+#book_tab2 div:nth-child(4) {top:114px; left:111px}
+#book_tab2 div:nth-child(5) {top:152px; left:118px}
+#book_tab2 div:nth-child(6) {top:190px; left:125px}
+#book_tab2 div:nth-child(7) {top:228px; left:132px}
+#book_tab2 div:nth-child(8) {top:266px; left:139px}
+#book_tab2 div:nth-child(9) {top:304px; left:146px}
+#book_tab2 div:nth-child(10) {top:342px; left:150px}
+#book_tab2 div:nth-child(11) {top:380px; left:154px}
+#book_tab2 div:nth-child(12) {top:418px; left:158px}
+#book_tab2 div:nth-child(13) {top:456px; left:162px}
+#book_tab2 div:nth-child(14) {top:494px; left:166px}
+#book_tab2 div:nth-child(15) {top:532px; left:170px}
+#book_tab2 div:nth-child(16) {top:570px; left:174px}
+#book_tab2 div:nth-child(17) {top:608px; left:178px}
+#book_tab2 div:nth-child(18) {top:646px; left:182px}
+#book_tab2 div:nth-child(19) {top:684px; left:186px}
+#book_tab2 div:nth-child(20) {top:722px; left:190px}
+
+#book_tab3 div:nth-child(1) {top:20px; left:180px}
+#book_tab3 div:nth-child(2) {top:58px; left:187px}
+#book_tab3 div:nth-child(3) {top:96px; left:194px}
+#book_tab3 div:nth-child(4) {top:134px; left:201px}
+#book_tab3 div:nth-child(5) {top:172px; left:201px}
+#book_tab3 div:nth-child(6) {top:210px; left:201px}
+#book_tab3 div:nth-child(7) {top:248px; left:205px}
+#book_tab3 div:nth-child(8) {top:286px; left:209px}
+#book_tab3 div:nth-child(9) {top:324px; left:213px}
+#book_tab3 div:nth-child(10) {top:362px; left:217px}
+#book_tab3 div:nth-child(11) {top:400px; left:221px}
+#book_tab3 div:nth-child(12) {top:438px; left:225px}
+#book_tab3 div:nth-child(13) {top:476px; left:229px}
+#book_tab3 div:nth-child(14) {top:514px; left:233px}
+#book_tab3 div:nth-child(15) {top:552px; left:237px}
+#book_tab3 div:nth-child(16) {top:590px; left:241px}
+
+#book_tab4 div:nth-child(1) {top:40px; left:260px}
+#book_tab4 div:nth-child(2) {top:78px; left:263px}
+#book_tab4 div:nth-child(3) {top:116px; left:266px}
+#book_tab4 div:nth-child(4) {top:154px; left:269px}
+#book_tab4 div:nth-child(5) {top:194px; left:272px}
+#book_tab4 div:nth-child(6) {top:234px; left:275px}
+#book_tab4 div:nth-child(7) {top:274px; left:278px}
+#book_tab4 div:nth-child(8) {top:314px; left:281px}
+#book_tab4 div:nth-child(9) {top:354px; left:284px}
+#book_tab4 div:nth-child(10) {top:394px; left:287px}
+#book_tab4 div:nth-child(11) {top:434px; left:290px}
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="left-div">
+         
+        <div class="row con-tt" id='con-tt'></div>
+        <div class="con-vv" id='div_scrpt'>
+
+  <div id='div_toc2'>
+            <div class='toc' onclick=load_bk('Gen')><b>創</b>世記</div>
+            <div class='toc' onclick=load_bk('Exo')><b>出</b>埃及記</div>
+            <div class='toc' onclick=load_bk('Lev')><b>利</b>未記</div>
+            <div class='toc' onclick=load_bk('Num')><b>民</b>數記</div>
+            <div class='toc' onclick=load_bk('Deu')><b>申</b>命記</div>
+            <div style="clear:both;height:1em;"></div>
+        <div class='toc' onclick=load_bk('Jos')>約<b>書</b>亞記</div>
+            <div class='toc' onclick=load_bk('Jug')><b>士</b>師記</div>
+            <div class='toc' onclick=load_bk('Rut')>路<b>得</b>記</div>
+
+</div>
+  <div id='div_toc2'>   
+            <div class='toc' onclick=load_bk('1Sa')><b>撒</b>母耳記上</div>
+            <div class='toc' onclick=load_bk('2Sa')>撒母耳記下</div>
+            <div style="clear:both;height:1em;"></div>
+            <div class='toc' onclick=load_bk('1Ki')>列<b>王</b>記上</div>
+            <div class='toc' onclick=load_bk('2Ki')>列王記下</div>
+            <div style="clear:both;height:1em;"></div>
+            <div class='toc' onclick=load_bk('1Ch')>歷<b>代</b>志上</div>
+            <div class='toc' onclick=load_bk('2Ch')>歷代志下</div>
+            <div style="clear:both;height:1em;"></div>
+            <div class='toc' onclick=load_bk('Ezr')>以斯<b>拉</b>記</div>
+            <div class='toc' onclick=load_bk('Neh')><b>尼</b>希米記</div>
+            <div class='toc' onclick=load_bk('Est')>以<b>斯</b>帖記</div>
+</div>
+  <div id='div_toc2'>   
+            <div class='toc' onclick=load_bk('Job')>約<b>伯</b>記</div>
+            <div class='toc' onclick=load_bk('Psm')><b>詩</b>篇</div>
+            <div class='toc' onclick=load_bk('Pro')><b>箴</b>言</div>
+            <div class='toc' onclick=load_bk('Ecc')><b>傳</b>道書</div>
+            <div class='toc' onclick=load_bk('Son')>雅<b>歌</b></div>
+            <div style="clear:both;height:1em;"></div>
+            <div class='toc' onclick=load_bk('Isa')>以<b>賽</b>亞書</div>
+            <div class='toc' onclick=load_bk('Jer')><b>耶</b>利米書</div>
+            <div class='toc' onclick=load_bk('Lam')>耶利米<b>哀</b>歌</div>
+            <div class='toc' onclick=load_bk('Eze')>以西<b>結</b>書</div>
+            <div class='toc' onclick=load_bk('Dan')><b>但</b>以理書</div>
+</div>
+  <div id='div_toc2'>   
+            <div class='toc' onclick=load_bk('Hos')><b>何</b>西阿書</div>
+            <div class='toc' onclick=load_bk('Joe')>約<b>珥</b>書</div>
+            <div class='toc' onclick=load_bk('Amo')>阿<b>摩</b>司書</div>
+            <div class='toc' onclick=load_bk('Oba')><b>俄</b>巴底亞書</div>
+            <div class='toc' onclick=load_bk('Jon')>約<b>拿</b>書</div>
+            <div class='toc' onclick=load_bk('Mic')><b>彌</b>迦書</div>
+            <div class='toc' onclick=load_bk('Nah')>那<b>鴻</b>書</div>
+            <div class='toc' onclick=load_bk('Hab')><b>哈</b>巴谷書</div>
+            <div class='toc' onclick=load_bk('Zep')>西<b>番</b>雅書</div>
+            <div class='toc' onclick=load_bk('Hag')>哈<b>該</b>書</div>
+            <div class='toc' onclick=load_bk('Zec')>撒迦利<b>亞</b>書</div>
+            <div class='toc' onclick=load_bk('Mal')><b>瑪</b>拉基書</div>
+</div>
+            <div style="clear:both;height:2em;"></div>
+  <div id='div_toc2'>   
+            <div class='toc' onclick=load_bk('Mat')>馬<b>太</b>福音</div>
+            <div class='toc' onclick=load_bk('Mak')>馬<b>可</b>福音</div>
+            <div class='toc' onclick=load_bk('Luk')><b>路</b>加福音</div>
+            <div class='toc' onclick=load_bk('Jhn')><b>約</b>翰福音</div>
+            <div class='toc' onclick=load_bk('Act')>使<b>徒</b>行傳</div>
+            <div style="clear:both;height:2em;"></div>
+
+</div>
+  <div id='div_toc2'>  
+            <div class='toc' onclick=load_bk('Rom')><b>羅</b>馬書</div>
+            <div class='toc' onclick=load_bk('1Co')>哥<b>林</b>多前書</div>
+            <div class='toc' onclick=load_bk('2Co')>哥<b>林</b>多後書</div> 
+            <div class='toc' onclick=load_bk('Gal')><b>加</b>拉太書</div>
+            <div class='toc' onclick=load_bk('Eph')>以<b>弗</b>所書</div>
+            <div class='toc' onclick=load_bk('Phl')><b>腓</b>立比書</div>
+            <div class='toc' onclick=load_bk('Col')>歌羅<b>西</b>書</div>
+</div>
+  <div id='div_toc2'>  
+            <div class='toc' onclick=load_bk('1Ts') style='width:8em'><b>帖</b>撒羅尼迦前書</div>
+            <div class='toc' onclick=load_bk('2Ts') style='width:8em'><b>帖</b>撒羅尼迦後書</div>
+            <div class='toc' onclick=load_bk('1Ti')><b>提</b>摩太前書</div>
+            <div class='toc' onclick=load_bk('2Ti')><b>提</b>摩太後書</div>
+            <div class='toc' onclick=load_bk('Tit')>提<b>多</b>書</div>
+            <div class='toc' onclick=load_bk('Phm')>腓利<b>門</b>書</div>
+            <div class='toc' onclick=load_bk('Heb')>希伯<b>來</b>書</div>
+            <div class='toc' onclick=load_bk('Jas')><b>雅</b>各書</div>
+</div>
+  <div id='div_toc2'>   
+
+
+            <div class='toc' onclick=load_bk('1Pe')><b>彼</b>得前書</div>
+            <div class='toc' onclick=load_bk('2Pe')><b>彼</b>得後書</div>
+
+            <div class='toc' onclick=load_bk('1Jn')><b>約</b>翰<b>一</b>書</div>
+            <div class='toc' onclick=load_bk('2Jn')><b>約</b>翰<b>二</b>書</div>
+            <div class='toc' onclick=load_bk('3Jn')><b>約</b>翰<b>三</b>書</div>
+
+            <div class='toc' onclick=load_bk('Jud')><b>猶</b>大書</div>
+            <div class='toc' onclick=load_bk('Rev')><b>啟</b>示錄</div>
+
+        </div></div>
+        
+
+
+        </div>
+        <div class="right-div">
+        <div id="book_tab1">
+<div onclick="load_bk('Gen')">創 </div>
+<div onclick="load_bk('Exo')">出</div>
+<div onclick="load_bk('Lev')">利</div>
+<div onclick="load_bk('Num')">民</div>
+<div onclick="load_bk('Deu')">申</div>
+<div onclick="load_bk('Jos')">書</div>
+<div onclick="load_bk('Jug')">士</div>
+<div onclick="load_bk('Rut')">得</div>
+<div onclick="load_bk('1Sa')">撒上</div>
+<div onclick="load_bk('2Sa')">撒下</div>
+<div onclick="load_bk('1Ki')">王上</div>
+<div onclick="load_bk('2Ki')">王下</div>
+<div onclick="load_bk('1Ch')">代上</div>
+<div onclick="load_bk('2Ch')">代下</div>
+s<div onclick="load_bk('Ezr')">拉</div>
+<div onclick="load_bk('Neh')">尼</div>
+<div onclick="load_bk('Est')">斯</div>
+<div onclick="load_bk('Job')">伯</div>
+<div onclick="load_bk('Psm')">詩</div>
+</div>
+<div id="book_tab2">
+<div onclick="load_bk('Pro')">箴</div>
+<div onclick="load_bk('Ecc')">傳</div>
+<div onclick="load_bk('Son')">歌</div>
+<div onclick="load_bk('Isa')">賽</div>
+<div onclick="load_bk('Jer')">耶</div>
+<div onclick="load_bk('Lam')">哀</div>
+<div onclick="load_bk('Eze')">結</div>
+<div onclick="load_bk('Dan')">但</div>
+<div onclick="load_bk('Hos')">何</div>
+<div onclick="load_bk('Joe')">珥</div>
+<div onclick="load_bk('Amo')">摩</div>
+<div onclick="load_bk('Oba')">俄</div>
+<div onclick="load_bk('Jon')">拿</div>
+<div onclick="load_bk('Mic')">彌</div>
+<div onclick="load_bk('Nah')">鴻</div>
+<div onclick="load_bk('Hab')">哈</div>
+<div onclick="load_bk('Zep')">番</div>
+<div onclick="load_bk('Hag')">該</div>
+<div onclick="load_bk('Zec')">亞</div>
+<div onclick="load_bk('Mal')">瑪</div>
+</div>
+<div id="book_tab3">
+<div onclick="load_bk('Mat')">太</div>
+<div onclick="load_bk('Mak')">可</div>
+<div onclick="load_bk('Luk')">路</div>
+<div onclick="load_bk('Jhn')">約</div>
+<div onclick="load_bk('Act')">徒</div>
+<div onclick="load_bk('Rom')">羅</div>
+<div onclick="load_bk('1Co')">林前</div>
+<div onclick="load_bk('2Co')">林後</div>
+<div onclick="load_bk('Gal')">加</div>
+<div onclick="load_bk('Eph')">弗</div>
+<div onclick="load_bk('Phl')">腓</div>
+<div onclick="load_bk('Col')">西</div>
+<div onclick="load_bk('1Ts')">帖前</div>
+<div onclick="load_bk('2Ts')">帖後</div>
+<div onclick="load_bk('1Ti')">提前</div>
+<div onclick="load_bk('2Ti')">提後</div>
+</div>
+<div id="book_tab4">
+<div onclick="load_bk('Tit')">多</div>
+<div onclick="load_bk('Phm')">門</div>
+<div onclick="load_bk('Heb')">來</div>
+<div onclick="load_bk('Jas')">雅</div>
+<div onclick="load_bk('1Pe')">彼前</div>
+<div onclick="load_bk('2Pe')">彼後</div>
+<div onclick="load_bk('1Jn')">約一</div>
+<div onclick="load_bk('2Jn')">約二</div>
+<div onclick="load_bk('3Jn')">約三</div>
+<div onclick="load_bk('Jud')">猶</div>
+<div onclick="load_bk('Rev')">啟</div>
+</div> 
+        
+        </div>
+    </div>
+</body>
+
+<script>
+
+var tot_chp
+var book_name
+function load_bk(bk_nm)
+{
+var toc = ""
+tot_chp=INDX[bk_nm]['chpnm'] 
+book_name_eng=CUV[bk_nm]['bk_e'] 
+book_name=CUV[bk_nm]['bk_c'] 
+        var toc = "<table id='bk_nm_chp'><tr><td width='130px'>" + CUV[bk_nm]['bk_c'] + "</td><td>"
+        for (var i = 1; i <= tot_chp; i++)
+        {
+            toc += " <span class='bk_chp' onclick=showS([['" + bk_nm + "'," + i + "]])>" + i + "</span> ";
+            if ((i % 10) == 0) {
+                toc += "<br/>" //add line break every 10
+            }
+        }
+        toc += "</td></tr></table>"
+
+        document.getElementById("con-tt").innerHTML = toc;
+
+        showS([[bk_nm, 1]]); //show first chapter
+
+} // load_bk
+
+  
+function showS(scrpts)
+{
+
+    for (i = 0; i < scrpts.length; i++)//for each parameter
+    {  var out = ""
+        out = out + "<div class='bk_name'>"
+        rootnm=INDX[scrpts[i][0]]['rootnm']
+        bkcode=INDX[scrpts[i][0]]['bkcode']
+
+        var chp = scrpts[i][1]
+        var prevc = chp - 1
+        var nextc = chp + 1
+        
+        var nav="<div class='nav'>"
+        if (prevc > 0) {
+            nav = nav + "<span class='ref_ver_tog' onclick=showS([['" + scrpts[i][0] + "'," + prevc + "]])>&lt;</span>"
+        }
+     nav = nav + " <span>"  +book_name + " : "+  chp+ " / "+ book_name_eng + " : "+  chp+"</span>  "
+         if (nextc <= Object.keys(CUV[scrpts[i][0]]).length - 5) {
+            nav = nav + "<span class='ref_ver_tog' onclick=showS([['" + scrpts[i][0] + "'," + nextc + "]])>&gt;</span>"}
+        nav=nav+"</div>"
+
+	
+        nav1 = "<span class='ref_ccbible'>"
+
+        if (bkcode < 10)
+        {
+            bkcode = "0" + bkcode
+        }
+        else {
+            bkcode = bkcode
+        }
+        if (chp < 10)
+        {
+            chpcode = "0" + chp
+        } else {
+            chpcode = chp
+        }
+
+        if (bkcode == 19)
+        {
+            if (chp < 100)
+            {
+                chpcode = "0" + chpcode
+            }
+        }
+        
+        nav1 = nav1 + "<a href='https://www.ccbiblestudy.org/" + rootnm + "/" + bkcode + "CT" + chpcode + ".htm' target='_blank'>註解</a>"
+        nav1 = nav1 + " / <a href='https://www.ccbiblestudy.org/" + rootnm + "/" + bkcode + "GT" + chpcode + ".htm' target='_blank'>拾穗</a>"
+        nav1 = nav1 + " / <a href='https://www.ccbiblestudy.org/" + rootnm + "/" + bkcode + "IT" + chpcode + ".htm' target='_blank'>例證</a>"
+        nav1 = nav1 + " / <a href='https://www.ccbiblestudy.org/" + rootnm + "/" + bkcode + "OT" + chpcode + ".htm' target='_blank'>綱目</a>"
+        nav1 = nav1 + "</span></div>"
+out=out+nav+nav1
+// 和合本    ========================================
+out=out + "<br/><br/>"+ book_name +" " +chp+"<br/><br/>"
+            for (j = 1; j <= Object.keys(CUV[scrpts[i][0]][scrpts[i][1]]).length; j++)
+            {
+                out += "<sup><small>" + j + "</small></sup> <span class='ChiTxt'>" + CUV[scrpts[i][0]][scrpts[i][1]][j] + "</span>"
+            }
+            out += "<br/><br/>"
+
+out=out+nav
+// English NLT  ========================================
+out=out + "<br/><br/>"+ book_name_eng +" " +chp+" - NLT<br/><br/>"
+            for (j = 1; j <= Object.keys(NLT[scrpts[i][0]][scrpts[i][1]]).length; j++)
+            {
+                out += "<sup><small>" + j + " </small></sup><span class='EngTxt'>" + NLT[scrpts[i][0]][scrpts[i][1]][j] + "</span> "
+            }
+            out += "<br/><br/>"
+
+
+out=out+nav
+// English NIV  ========================================
+out=out + "<br/><br/>"+ book_name_eng +" " +chp+" - NIV<br/><br/>"
+            for (j = 1; j <= Object.keys(NIV[scrpts[i][0]][scrpts[i][1]]).length; j++)
+            {
+                out += "<sup><small>" + j + " </small></sup><span class='EngTxt'>" + NIV[scrpts[i][0]][scrpts[i][1]][j] + "</span> "
+            }
+            out += "<br/><br/>"
+
+
+out=out+nav
+
+    }
+    out += "<br/><br/>"
+    document.getElementById("div_scrpt").innerHTML = out
+    document.getElementById("div_scrpt").scrollTo(0, 0);
+
+   
+} //showS
+</script>
+<script src='../json/indx.js'></script>
+<script src='../json/cuv.js'></script>
+<script src='../json/nlt.js'></script>
+<script src='../json/niv.js'></script>
+</html>
