@@ -3,150 +3,220 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <style>
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
-
-body {
-
-  margin:0px;
-   background-image: url(bg.jpg);
-    background-position:right;
-    background-size: cover;
-    background-repeat:no-repeat;
-      background-attachment: fixed;
-      
-      font-family: 'Lato',sans-serif;
-      font-weight:200;
-}
-#containAll {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    height: 0px;
-    margin: 0;
-    
-    padding: 0
-}
 </style>
 </head>
 <body>
     <div id='div1'></div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <style>
-   
-      tt {font-size:1.0em }
 
-        #span_cuv {
-            display: block;
-            margin: 0px 50px 20px 20px;
-            width:800px;
-            padding: 0px 0px 0px 10px;
-            border-left: 1px solid #F0B9B9;
-            color: 666666;
-        }
+   <style>
+@import ur[](https://fonts.googleapis.com/css?family=Lato:300);
 
-        .v_sup {
-            font-size: 0.7em;
-            vertical-align: super;
-            color: #999999;
-            margin-right: 5px;
-            text-shadow: none;
-        }
+body {
+  margin: 0;
+  background-image: none;           /* hidden by default */
+  background-color: #f8f8f8;        /* light fallback color for mobile */
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #333;
+}
 
-        .num {
-        }
+/* Background image visible only on laptops & desktops */
+@media (min-width: 1025px) {
+  body {
+    background-image: url(bg.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
 
-        .v_txt {
-            color: #000000;
-            text-shadow: none;
-        }
+#containAll {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
 
-        .sml {
-            font-size: 0.8em
-        }
+/* Base font size that scales with viewport */
+html {
+  font-size: clamp(14px, 2.8vw, 18px);   /* Responsive base font */
+}
 
-        #div_list {
-            padding: 0px 30px 30px 0px;
-             position: absolute;
-            top: 0px;
-            left: 0px;
-            z-index: 90;
-        }
+/* Main content container */
+#span_cuv {
+  display: block;
+  margin: 20px 30px 30px 20px;
+  max-width: 800px;
+  padding: 0 0 0 15px;
+  border-left: 1px solid #F0B9B9;
+  color: #666666;
+}
 
-     
+/* Typography scaling */
+tt {
+  font-size: clamp(1.0em, 1.1em, 1.3em);
+}
 
-        ol,ul {
-            list-style-type: hypen;
-            margin: 3px 0px 3px 3px;
-			border-spacing: 0 7px;
-        }
+.v_sup {
+  font-size: clamp(0.65em, 0.75em, 0.85em);
+  vertical-align: super;
+  color: #999999;
+  margin-right: 6px;
+}
 
-        ol > tt {
-            font-size: 1.4em;
-            display: block;
-            padding: 30px;line-height:1.5em;
-        }
+.v_txt {
+  color: #000000;
+}
 
-        li {
-            display: table-row;
-            width: 100%;
-            line-height: 1.5em;
-            
-        }
+.sml {
+  font-size: clamp(0.75em, 0.85em, 0.95em);
+}
 
-        ol > li:before , ul > li:before{
-            content: " — ";
-            display: table-cell;
-            padding-right: 5px;
-            font-family: arial;
-            font-size: 1.0em;
-            color: #F06000;
-            font-weight: normal
-        }
+/* List container */
+#div_list {
+  padding: 20px 25px 40px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100%;
+  max-width: 850px;
+}
 
-        .inc {
-            cursor: pointer;
-            margin-left: 6px;
-            font-size: 1.0em;
-            white-space: nowrap;
-        }
+/* Lists */
+ol, ul {
+  list-style-type: none;           /* Changed from "hypen" which was invalid */
+  margin: 10px 0 20px 0;
+  padding-left: 10px;
+}
 
-        .imp {
-            color: #FF6600;
-            cursor: pointer;
-            margin-left: 5px;
-            font-family: Arial;
-            font-size: 0.8em;
-        }
+ol > tt {
+  font-size: clamp(1.35em, 1.8em, 2.2em);
+  display: block;
+  padding: 25px 0 15px 0;
+  line-height: 1.45;
+}
 
-        #div_list .ref {
-            font-family: Candara;
-            font-size: 0.8em;
-            color: #999999;
-            margin-left: 6px;
-        }
+li {
+  display: table-row;
+  width: 100%;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
 
-        #div_list b {
-            font-weight: bold;
-        }
+ol > li:before,
+ul > li:before {
+  content: " — ";
+  display: table-cell;
+  padding-right: 10px;
+  font-family: Arial, sans-serif;
+  font-size: clamp(1.0em, 1.1em, 1.25em);
+  color: #F06000;
+}
 
-        .exp, .coll {
-            color: #FF9955;
-            font-family: Arial;
-            font-size: 1.4em;
-        }
+/* Inline elements */
+.inc {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: clamp(0.95em, 1.05em, 1.15em);
+  white-space: nowrap;
+}
 
-        .exp:after {
-            margin-left: 4px;
-            content: " v ";
-            cursor: pointer;
-        }
+.imp {
+  color: #FF6600;
+  cursor: pointer;
+  margin-left: 6px;
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.75em, 0.82em, 0.9em);
+}
 
-        .coll:after {
-            content: " <  ";cursor:pointer;}
+#div_list .ref {
+  font-family: Candara, Arial, sans-serif;
+  font-size: clamp(0.72em, 0.8em, 0.88em);
+  color: #999999;
+  margin-left: 8px;
+}
 
-        #div_list .active {color:#E05000; }
-        
+.exp, .coll {
+  color: #FF9955;
+  font-family: Arial, sans-serif;
+  font-size: clamp(1.25em, 1.45em, 1.65em);
+  cursor: pointer;
+}
+
+.exp:after {
+  margin-left: 6px;
+  content: " v ";
+}
+
+.coll:after {
+  content: " < ";
+}
+
+#div_list .active {
+  color: #E05000;
+}
+
+/* ===================== RESPONSIVE ADJUSTMENTS ===================== */
+
+@media (max-width: 1024px) {   /* iPad and smaller laptops */
+  #span_cuv {
+    margin: 15px 20px 25px 15px;
+    padding-left: 12px;
+  }
+  
+  #div_list {
+    padding: 15px 20px 30px 15px;
+  }
+}
+
+@media (max-width: 768px) {   /* Tablets in portrait */
+  html {
+    font-size: clamp(15px, 4vw, 18px);
+  }
+  
+  #span_cuv {
+    margin: 15px 15px 25px 12px;
+    width: auto;
+    max-width: 100%;
+  }
+  
+  #div_list {
+    padding: 10px 15px 25px 10px;
+  }
+}
+
+@media (max-width: 480px) {   /* iPhones and small phones */
+  html {
+    font-size: clamp(14px, 4.5vw, 17px);
+  }
+  
+  #span_cuv {
+    margin: 12px 12px 20px 10px;
+    padding-left: 10px;
+  }
+  
+  #div_list {
+    padding: 8px 12px 20px 8px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Extra safety for very small screens (iPhone SE, etc.) */
+@media (max-width: 360px) {
+  html {
+    font-size: 15px;
+  }
+}
+
     </style>
     <div id='containAll'>
      
